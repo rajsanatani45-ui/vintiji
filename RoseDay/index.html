@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rose Day 🌹 - A Special Message For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-cream: #FDF5F0;
+            --pink-soft: #FADADD;
+            --pink-medium: #F4A5AE;
+            --pink-deep: #E8838F;
+            --rose-coral: #E07A7A;
+            --rose-dark: #C25B5B;
+            --brown-warm: #8B5A5A;
+            --green-leaf: #6B8E7A;
+            --green-dark: #4A6B5A;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+        /* ========================================
+           Password Screen - Secret Envelope
+           ======================================== */
+        #password-screen {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #FDF5F0 0%, #FADADD 100%);
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Decorative Roses Background */
+        .rose-decoration {
+            position: absolute;
+            font-size: clamp(60px, 15vw, 150px);
+            opacity: 0.15;
+            animation: gentleSway 6s ease-in-out infinite;
+        }
+
+        .rose-decoration.top-left {
+            top: 5%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .rose-decoration.top-right {
+            top: 5%;
+            right: 5%;
+            animation-delay: 1s;
+        }
+
+        .rose-decoration.bottom-left {
+            bottom: 5%;
+            left: 5%;
+            animation-delay: 2s;
+        }
+
+        .rose-decoration.bottom-right {
+            bottom: 5%;
+            right: 5%;
+            animation-delay: 3s;
+        }
+
+        .rose-decoration.center-left {
+            top: 50%;
+            left: 2%;
+            transform: translateY(-50%);
+            animation-delay: 0.5s;
+        }
+
+        .rose-decoration.center-right {
+            top: 50%;
+            right: 2%;
+            transform: translateY(-50%);
+            animation-delay: 1.5s;
+        }
+
+        @keyframes gentleSway {
+
+            0%,
+            100% {
+                transform: rotate(-5deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(5deg) scale(1.05);
+            }
+        }
+
+        /* Floating Petals */
+        .floating-petals {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--pink-medium), var(--rose-coral));
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.6;
+            animation: petalFall linear infinite;
+        }
+
+        .petal:nth-child(1) {
+            left: 5%;
+            animation-duration: 15s;
+            animation-delay: 0s;
+            width: 18px;
+            height: 18px;
+        }
+
+        .petal:nth-child(2) {
+            left: 15%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+            width: 22px;
+            height: 22px;
+        }
+
+        .petal:nth-child(3) {
+            left: 25%;
+            animation-duration: 18s;
+            animation-delay: 4s;
+            width: 16px;
+            height: 16px;
+        }
+
+        .petal:nth-child(4) {
+            left: 35%;
+            animation-duration: 14s;
+            animation-delay: 1s;
+            width: 20px;
+            height: 20px;
+        }
+
+        .petal:nth-child(5) {
+            left: 45%;
+            animation-duration: 16s;
+            animation-delay: 3s;
+            width: 24px;
+            height: 24px;
+        }
+
+        .petal:nth-child(6) {
+            left: 55%;
+            animation-duration: 13s;
+            animation-delay: 5s;
+            width: 17px;
+            height: 17px;
+        }
+
+        .petal:nth-child(7) {
+            left: 65%;
+            animation-duration: 17s;
+            animation-delay: 0.5s;
+            width: 21px;
+            height: 21px;
+        }
+
+        .petal:nth-child(8) {
+            left: 75%;
+            animation-duration: 11s;
+            animation-delay: 2.5s;
+            width: 19px;
+            height: 19px;
+        }
+
+        .petal:nth-child(9) {
+            left: 85%;
+            animation-duration: 14s;
+            animation-delay: 4.5s;
+            width: 23px;
+            height: 23px;
+        }
+
+        .petal:nth-child(10) {
+            left: 95%;
+            animation-duration: 15s;
+            animation-delay: 1.5s;
+            width: 15px;
+            height: 15px;
+        }
+
+        @keyframes petalFall {
+            0% {
+                top: -30px;
+                transform: rotate(0deg) translateX(0);
+                opacity: 0.6;
+            }
+
+            25% {
+                transform: rotate(90deg) translateX(30px);
+            }
+
+            50% {
+                transform: rotate(180deg) translateX(-20px);
+            }
+
+            75% {
+                transform: rotate(270deg) translateX(25px);
+            }
+
+            100% {
+                top: 110vh;
+                transform: rotate(360deg) translateX(-15px);
+                opacity: 0.2;
+            }
+        }
+
+        /* Secret Envelope Card */
+        .envelope-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .envelope-header {
+            margin-bottom: 30px;
+        }
+
+        .day-badge {
+            display: inline-block;
+            background: rgba(228, 131, 143, 0.2);
+            color: var(--rose-dark);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .main-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 6vw, 48px);
+            font-weight: 600;
+            color: var(--brown-warm);
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .sub-quote {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(20px, 4vw, 28px);
+            color: var(--rose-coral);
+        }
+
+        /* The Secret Card */
+        .secret-card {
+            background: linear-gradient(145deg, #FFFFFF, #FDF5F0);
+            border-radius: 24px;
+            padding: 40px 30px;
+            margin-top: 40px;
+            box-shadow:
+                0 20px 60px rgba(200, 100, 100, 0.15),
+                0 10px 30px rgba(200, 100, 100, 0.1),
+                inset 0 2px 0 rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secret-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.6s;
+        }
+
+        .secret-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow:
+                0 30px 80px rgba(200, 100, 100, 0.2),
+                0 15px 40px rgba(200, 100, 100, 0.15);
+        }
+
+        .secret-card:hover::before {
+            left: 100%;
+        }
+
+        .secret-card:active {
+            transform: scale(0.98);
+        }
+
+        .card-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--brown-warm);
+            margin-bottom: 10px;
+        }
+
+        .card-subtitle {
+            color: var(--pink-deep);
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .password-section {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(200, 100, 100, 0.15);
+        }
+
+        .password-input {
+            width: 100%;
+            max-width: 280px;
+            padding: 16px 24px;
+            font-size: 16px;
+            border: 2px solid rgba(200, 100, 100, 0.2);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--brown-warm);
+            text-align: center;
+            outline: none;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .password-input::placeholder {
+            color: var(--pink-medium);
+        }
+
+        .password-input:focus {
+            border-color: var(--rose-coral);
+            box-shadow: 0 0 20px rgba(224, 122, 122, 0.2);
+        }
+
+        .unlock-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, var(--rose-coral), var(--rose-dark));
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 10px 30px rgba(194, 91, 91, 0.3);
+        }
+
+        .unlock-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(194, 91, 91, 0.4);
+        }
+
+        .unlock-btn:active {
+            transform: scale(0.98);
+        }
+
+        .error-msg {
+            color: var(--rose-dark);
+            margin-top: 15px;
+            font-size: 14px;
+            min-height: 20px;
+        }
+
+        /* ========================================
+           Love Letter Screen
+           ======================================== */
+        #love-letter-screen {
+            display: none;
+            min-height: 100vh;
+            min-height: 100dvh;
+            background: linear-gradient(180deg, #FDF5F0 0%, #FADADD 50%, #F4A5AE 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        #love-letter-screen.active {
+            display: block;
+            animation: fadeInScreen 1s ease-out;
+        }
+
+        @keyframes fadeInScreen {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Header */
+        .love-header {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .love-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 10vw, 72px);
+            font-weight: 700;
+            color: var(--brown-warm);
+            margin-bottom: 10px;
+            animation: titleReveal 1s ease-out 0.3s both;
+        }
+
+        @keyframes titleReveal {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .love-date {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(20px, 5vw, 32px);
+            color: var(--rose-coral);
+            animation: titleReveal 1s ease-out 0.5s both;
+        }
+
+        /* Love Letter Card */
+        .letter-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .love-letter {
+            background: linear-gradient(145deg, #FFFFFF, #FDF8F5);
+            border-radius: 30px;
+            padding: clamp(30px, 8vw, 60px);
+            box-shadow:
+                0 30px 80px rgba(200, 100, 100, 0.2),
+                0 15px 40px rgba(200, 100, 100, 0.1),
+                inset 0 2px 0 rgba(255, 255, 255, 0.9);
+            animation: letterSlideUp 0.8s ease-out 0.7s both;
+            position: relative;
+        }
+
+        @keyframes letterSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .letter-roses {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 30px;
+            animation: rosesBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes rosesBounce {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .letter-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(22px, 5vw, 34px);
+            font-weight: 500;
+            font-style: italic;
+            color: var(--brown-warm);
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .letter-quote::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: var(--pink-soft);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 1;
+            z-index: -1;
+        }
+
+        .letter-hearts {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .letter-hearts span {
+            display: inline-block;
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+
+        .letter-hearts span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .letter-hearts span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        /* Music Player */
+        .music-player {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(253, 245, 240, 0.9));
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(200, 100, 100, 0.1);
+        }
+
+        .vinyl-disc {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2D2D2D, #1A1A1A);
+            border-radius: 50%;
+            position: relative;
+            flex-shrink: 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .vinyl-disc.spinning {
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .vinyl-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--rose-coral), var(--rose-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .vinyl-grooves {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .music-info {
+            flex: 1;
+        }
+
+        .song-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--brown-warm);
+            margin-bottom: 5px;
+        }
+
+        .song-artist {
+            font-size: 13px;
+            color: var(--pink-deep);
+        }
+
+        .play-btn {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--rose-coral), var(--rose-dark));
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(194, 91, 91, 0.3);
+            transition: all 0.3s;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Rose Cards Gallery */
+        .rose-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .rose-card {
+            border-radius: 20px;
+            padding: 20px 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rose-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .rose-card:hover::before {
+            left: 100%;
+        }
+
+        .rose-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Different colored rose cards */
+        .rose-card.red {
+            background: linear-gradient(145deg, #FFE5E5, #FFCCCC);
+        }
+
+        .rose-card.pink {
+            background: linear-gradient(145deg, #FFE5F0, #FFCCE0);
+        }
+
+        .rose-card.yellow {
+            background: linear-gradient(145deg, #FFF8E5, #FFEEBB);
+        }
+
+        .rose-card.white {
+            background: linear-gradient(145deg, #FFFFFF, #F5F5F5);
+        }
+
+        .rose-card.orange {
+            background: linear-gradient(145deg, #FFF0E5, #FFE0CC);
+        }
+
+        .rose-card.peach {
+            background: linear-gradient(145deg, #FFF5EE, #FFE4D6);
+        }
+
+        .rose-card.lavender {
+            background: linear-gradient(145deg, #F5E5FF, #E5CCFF);
+        }
+
+        .rose-card.coral {
+            background: linear-gradient(145deg, #FFE8E5, #FFD5CC);
+        }
+
+        .rose-card-icon {
+            font-size: 45px;
+            margin-bottom: 8px;
+        }
+
+        .rose-card-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 15px;
+            color: var(--brown-warm);
+            font-weight: 600;
+        }
+
+        .rose-card-meaning {
+            font-size: 11px;
+            color: var(--pink-deep);
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+
+        /* Shayari Modal */
+        .shayari-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .shayari-modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .shayari-content {
+            background: linear-gradient(145deg, #FFF8F5, #FFEEE8);
+            border-radius: 30px;
+            padding: 40px 30px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .shayari-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--brown-warm);
+            transition: 0.3s;
+        }
+
+        .shayari-close:hover {
+            transform: rotate(90deg);
+            color: var(--rose-dark);
+        }
+
+        .shayari-rose {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .shayari-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: var(--rose-dark);
+            margin-bottom: 20px;
+        }
+
+        .shayari-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--brown-warm);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .shayari-hindi {
+            font-size: 20px;
+            line-height: 2;
+        }
+
+        .shayari-hearts {
+            font-size: 24px;
+            margin-top: 15px;
+        }
+
+        /* Footer Message */
+        .footer-message {
+            text-align: center;
+            padding: 40px 20px 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(24px, 6vw, 36px);
+            color: var(--brown-warm);
+        }
+
+        /* Corner Roses */
+        .corner-rose {
+            position: fixed;
+            font-size: clamp(40px, 10vw, 80px);
+            opacity: 0.3;
+            z-index: 1;
+            animation: gentleSway 6s ease-in-out infinite;
+        }
+
+        .corner-rose.tl {
+            top: 10px;
+            left: 10px;
+        }
+
+        .corner-rose.tr {
+            top: 10px;
+            right: 10px;
+        }
+
+        .corner-rose.bl {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .corner-rose.br {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* Audio */
+        audio {
+            display: none;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 600px) {
+            .secret-card {
+                padding: 30px 20px;
+            }
+
+            .music-player {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rose-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animations for page elements */
+        .animate-in {
+            animation: slideUp 0.6s ease-out both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Petals -->
+    <div class="floating-petals">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+
+    <!-- Password Screen -->
+    <div id="password-screen">
+        <!-- Background Roses -->
+        <div class="rose-decoration top-left">🌹</div>
+        <div class="rose-decoration top-right">🌷</div>
+        <div class="rose-decoration bottom-left">🌷</div>
+        <div class="rose-decoration bottom-right">🌹</div>
+        <div class="rose-decoration center-left">💐</div>
+        <div class="rose-decoration center-right">💐</div>
+
+        <div class="envelope-container">
+            <div class="envelope-header">
+                <div class="day-badge">Day 01: Rose Day</div>
+                <h1 class="main-quote">Love planted a rose,<br>& the world turned sweet.</h1>
+                <p class="sub-quote">A special message awaits you...</p>
+            </div>
+
+            <div class="secret-card" id="secret-card">
+                <div class="card-icon">💌</div>
+                <h2 class="card-title">Secret Love Letter</h2>
+                <p class="card-subtitle">Click here to unlock the magic ✨</p>
+
+                <div class="password-section">
+                    <input type="password" class="password-input" id="password-input"
+                        placeholder="Enter the secret code..." autocomplete="off">
+                    <br>
+                    <button type="button" class="unlock-btn" id="unlock-btn">
+                        🔓 Open My Heart
+                    </button>
+                    <p class="error-msg" id="error-msg"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Love Letter Screen -->
+    <div id="love-letter-screen">
+        <!-- Corner Roses -->
+        <div class="corner-rose tl">🌹</div>
+        <div class="corner-rose tr">🌹</div>
+        <div class="corner-rose bl">🌷</div>
+        <div class="corner-rose br">🌷</div>
+
+        <header class="love-header">
+            <h1 class="love-title">🌹 Happy Rose Day 🌹</h1>
+            <p class="love-date">February 7th, 2026</p>
+        </header>
+
+        <div class="letter-container">
+            <div class="love-letter">
+                <div class="letter-roses">🌹 🌷 🌹</div>
+
+                <p class="letter-quote">
+                    I Don't know about forever,<br>
+                    but this moment with you feels perfect
+                </p>
+
+                <div class="letter-hearts">
+                    <span>💕</span>
+                    <span>💖</span>
+                    <span>💕</span>
+                </div>
+
+                <!-- Music Player -->
+                <div class="music-player">
+                    <div class="vinyl-disc" id="vinyl-disc">
+                        <div class="vinyl-grooves"></div>
+                        <div class="vinyl-center">🎵</div>
+                    </div>
+                    <div class="music-info">
+                        <h3 class="song-name">Raataan Lambiyan</h3>
+                        <p class="song-artist">Jubin Nautiyal & Asees Kaur</p>
+                    </div>
+                    <button class="play-btn" id="play-btn">
+                        <span id="play-icon">▶</span>
+                    </button>
+                </div>
+
+                <!-- Rose Cards - All Colors -->
+                <div class="rose-gallery">
+                    <div class="rose-card red" data-rose="red">
+                        <div class="rose-card-icon">🌹</div>
+                        <div class="rose-card-title">Red Rose</div>
+                        <div class="rose-card-meaning">True Love</div>
+                    </div>
+                    <div class="rose-card pink" data-rose="pink">
+                        <div class="rose-card-icon">🌸</div>
+                        <div class="rose-card-title">Pink Rose</div>
+                        <div class="rose-card-meaning">Gratitude</div>
+                    </div>
+                    <div class="rose-card yellow" data-rose="yellow">
+                        <div class="rose-card-icon">🌻</div>
+                        <div class="rose-card-title">Yellow Rose</div>
+                        <div class="rose-card-meaning">Friendship</div>
+                    </div>
+                    <div class="rose-card white" data-rose="white">
+                        <div class="rose-card-icon">🤍</div>
+                        <div class="rose-card-title">White Rose</div>
+                        <div class="rose-card-meaning">Pure Love</div>
+                    </div>
+                    <div class="rose-card orange" data-rose="orange">
+                        <div class="rose-card-icon">🧡</div>
+                        <div class="rose-card-title">Orange Rose</div>
+                        <div class="rose-card-meaning">Desire</div>
+                    </div>
+                    <div class="rose-card peach" data-rose="peach">
+                        <div class="rose-card-icon">🌷</div>
+                        <div class="rose-card-title">Peach Rose</div>
+                        <div class="rose-card-meaning">Sincerity</div>
+                    </div>
+                    <div class="rose-card lavender" data-rose="lavender">
+                        <div class="rose-card-icon">💜</div>
+                        <div class="rose-card-title">Lavender Rose</div>
+                        <div class="rose-card-meaning">Enchantment</div>
+                    </div>
+                    <div class="rose-card coral" data-rose="coral">
+                        <div class="rose-card-icon">💐</div>
+                        <div class="rose-card-title">Coral Rose</div>
+                        <div class="rose-card-meaning">Passion</div>
+                    </div>
+                    <!-- Special Love Letter Card -->
+                    <div class="rose-card love-letter-card" id="love-letter-card"
+                        style="background: linear-gradient(145deg, #FFE8F0, #FFD0E0);">
+                        <div class="rose-card-icon">💌</div>
+                        <div class="rose-card-title">Roses For You Bby</div>
+                        <div class="rose-card-meaning">Click me for Flowers!</div>
+                    </div>
+                </div>
+
+                <!-- Shayari Modal -->
+                <div class="shayari-modal" id="shayari-modal">
+                    <div class="shayari-content">
+                        <span class="shayari-close" id="shayari-close">✕</span>
+                        <div class="shayari-rose" id="modal-rose">🌹</div>
+                        <h3 class="shayari-title" id="modal-title">Red Rose</h3>
+                        <p class="shayari-text shayari-hindi" id="modal-shayari"></p>
+                        <div class="shayari-hearts">💕 💖 💕</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-message">
+            <p class="footer-text">Forever & Always 💕</p>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio-player" loop>
+        <source src="raatan-lambiyan.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // ========================================
+        // Rose Day - Modern Aesthetic Website
+        // ========================================
+
+        const CORRECT_PASSWORD = 'vinti';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordScreen = document.getElementById('password-screen');
+            const loveScreen = document.getElementById('love-letter-screen');
+            const passwordInput = document.getElementById('password-input');
+            const unlockBtn = document.getElementById('unlock-btn');
+            const secretCard = document.getElementById('secret-card');
+            const errorMsg = document.getElementById('error-msg');
+            const playBtn = document.getElementById('play-btn');
+            const playIcon = document.getElementById('play-icon');
+            const audioPlayer = document.getElementById('audio-player');
+            const vinylDisc = document.getElementById('vinyl-disc');
+
+            let isPlaying = false;
+
+            // Unlock function
+            function unlockLetter() {
+                const password = passwordInput.value;
+
+                if (password === CORRECT_PASSWORD) {
+                    // Hide password screen with animation
+                    passwordScreen.style.opacity = '0';
+                    passwordScreen.style.transform = 'scale(0.95)';
+                    passwordScreen.style.transition = 'all 0.5s ease-out';
+
+                    setTimeout(function () {
+                        passwordScreen.style.display = 'none';
+                        loveScreen.classList.add('active');
+
+                        // Auto-play music
+                        setTimeout(function () {
+                            playMusic();
+                        }, 800);
+                    }, 500);
+
+                } else {
+                    errorMsg.textContent = '💔 Wrong password. Try with love!';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+
+                    // Shake animation
+                    secretCard.style.animation = 'shake 0.5s ease';
+                    setTimeout(function () {
+                        secretCard.style.animation = '';
+                    }, 500);
+                }
+            }
+
+            // Add shake animation
+            const shakeStyle = document.createElement('style');
+            shakeStyle.textContent = `
+                @keyframes shake {
+                    0%, 100% { transform: translateX(0); }
+                    25% { transform: translateX(-10px); }
+                    75% { transform: translateX(10px); }
+                }
+            `;
+            document.head.appendChild(shakeStyle);
+
+            // Event listeners
+            unlockBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                unlockLetter();
+            });
+
+            passwordInput.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    unlockLetter();
+                }
+            });
+
+            secretCard.addEventListener('click', function (e) {
+                if (e.target !== passwordInput && e.target !== unlockBtn) {
+                    passwordInput.focus();
+                }
+            });
+
+            // Music functions
+            function playMusic() {
+                audioPlayer.play().then(function () {
+                    isPlaying = true;
+                    playIcon.textContent = '⏸';
+                    vinylDisc.classList.add('spinning');
+                }).catch(function (error) {
+                    console.log('Auto-play blocked');
+                });
+            }
+
+            function pauseMusic() {
+                audioPlayer.pause();
+                isPlaying = false;
+                playIcon.textContent = '▶';
+                vinylDisc.classList.remove('spinning');
+            }
+
+            playBtn.addEventListener('click', function () {
+                if (isPlaying) {
+                    pauseMusic();
+                } else {
+                    playMusic();
+                }
+            });
+
+            // Focus input
+            passwordInput.focus();
+
+            // Hindi Love Shayari for each rose
+            const shayariData = {
+                red: {
+                    icon: '🌹',
+                    title: 'Red Like My Rose, Hot Like You',
+                    shayari: 'Warning: accepting this rose may cause butterflies 🦋'
+                },
+                pink: {
+                    icon: '🌸',
+                    title: 'A Pink Rose for a Cute Distraction',
+                    shayari: 'You’ve been living in my head rent-free 💕'
+                },
+                yellow: {
+                    icon: '🌻',
+                    title: 'A Little Yellow, A Lot of Interest',
+                    shayari: 'Can’t help smiling when it’s for you 😏'
+                },
+                white: {
+                    icon: '🤍',
+                    title: 'A White Rose with a Quiet Crush',
+                    shayari: 'Loud hearts aren’t always necessary 😏'
+                },
+                orange: {
+                    icon: '🧡',
+                    title: 'This Rose Matches My Energy for You',
+                    shayari: 'Warm, intense, and hard to ignore 🧡🔥'
+                },
+                peach: {
+                    icon: '🌷',
+                    title: 'A Peach Rose for Someone Special',
+                    shayari: 'Subtle, warm… just like the way I feel about you 🍑✨'
+                },
+                lavender: {
+                    icon: '💜',
+                    title: 'A Rose That Feels Like a First Crush',
+                    shayari: 'Soft, exciting, unforgettable 😌'
+                },
+                coral: {
+                    icon: '💐',
+                    title: 'Bright Petals, Playful Intentions',
+                    shayari: 'Careful—I flirt better when I smile 😏'
+                }
+            };
+
+            // Shayari Modal Elements
+            const shayariModal = document.getElementById('shayari-modal');
+            const modalRose = document.getElementById('modal-rose');
+            const modalTitle = document.getElementById('modal-title');
+            const modalShayari = document.getElementById('modal-shayari');
+            const shayariClose = document.getElementById('shayari-close');
+
+            // Rose card click - Show Shayari
+            document.querySelectorAll('.rose-card').forEach(function (card) {
+                card.addEventListener('click', function () {
+                    const roseType = card.getAttribute('data-rose');
+                    const data = shayariData[roseType];
+
+                    if (data) {
+                        modalRose.textContent = data.icon;
+                        modalTitle.textContent = data.title;
+                        modalShayari.innerHTML = data.shayari;
+                        shayariModal.classList.add('active');
+
+                        // Create heart burst effect
+                        for (let i = 0; i < 5; i++) {
+                            setTimeout(function () {
+                                createHeart(card);
+                            }, i * 100);
+                        }
+                    }
+                });
+            });
+
+            // Close modal
+            shayariClose.addEventListener('click', function () {
+                shayariModal.classList.remove('active');
+            });
+
+            shayariModal.addEventListener('click', function (e) {
+                if (e.target === shayariModal) {
+                    shayariModal.classList.remove('active');
+                }
+            });
+
+            function createHeart(element) {
+                const heart = document.createElement('div');
+                const hearts = ['❤️', '💕', '💖', '💗', '💓'];
+                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.cssText = `
+                    position: fixed;
+                    left: ${element.getBoundingClientRect().left + element.offsetWidth / 2}px;
+                    top: ${element.getBoundingClientRect().top}px;
+                    font-size: ${20 + Math.random() * 20}px;
+                    pointer-events: none;
+                    z-index: 1000;
+                    animation: floatHeart 1.5s ease-out forwards;
+                `;
+                document.body.appendChild(heart);
+                setTimeout(function () { heart.remove(); }, 1500);
+            }
+
+            // Add float heart animation
+            const heartStyle = document.createElement('style');
+            heartStyle.textContent = `
+                @keyframes floatHeart {
+                    0% { opacity: 1; transform: translateY(0) scale(0); }
+                    50% { opacity: 1; transform: translateY(-50px) scale(1.2); }
+                    100% { opacity: 0; transform: translateY(-100px) scale(0.8); }
+                }
+                @keyframes roseBurst {
+                    0% { opacity: 1; transform: translate(0, 0) scale(0) rotate(0deg); }
+                    50% { opacity: 1; transform: translate(var(--tx), var(--ty)) scale(1.5) rotate(180deg); }
+                    100% { opacity: 0; transform: translate(calc(var(--tx) * 2), calc(var(--ty) * 2)) scale(0.5) rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(heartStyle);
+
+            // Love Letter Card - Roses Explosion
+            const loveLetterCard = document.getElementById('love-letter-card');
+            if (loveLetterCard) {
+                loveLetterCard.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const rect = loveLetterCard.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+
+                    // Create burst of roses
+                    const roses = ['🌹', '🌷', '🌸', '💐', '🌺', '💮', '🏵️', '❤️', '💕', '💖'];
+
+                    for (let i = 0; i < 25; i++) {
+                        setTimeout(function () {
+                            const rose = document.createElement('div');
+                            rose.innerHTML = roses[Math.floor(Math.random() * roses.length)];
+
+                            // Random direction for burst
+                            const angle = (Math.random() * 360) * (Math.PI / 180);
+                            const distance = 80 + Math.random() * 150;
+                            const tx = Math.cos(angle) * distance;
+                            const ty = Math.sin(angle) * distance;
+
+                            rose.style.cssText = `
+                                position: fixed;
+                                left: ${centerX}px;
+                                top: ${centerY}px;
+                                font-size: ${30 + Math.random() * 30}px;
+                                pointer-events: none;
+                                z-index: 2000;
+                                --tx: ${tx}px;
+                                --ty: ${ty}px;
+                                animation: roseBurst 1.5s ease-out forwards;
+                            `;
+                            document.body.appendChild(rose);
+                            setTimeout(function () { rose.remove(); }, 1500);
+                        }, i * 50);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
